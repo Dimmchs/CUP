@@ -1,0 +1,40 @@
+
+{% extends "../layouts/task.html" %}
+
+{% set failure_theReason = "Unable to connect to [service name]" %}
+{% set person_fullName = "Jane Doe" %}
+{% set person_nationalInsurance = "XX 11 22 33 B" %}
+{% set bank_accountName = "Jane Doe" %}
+{% set bank_sortCode = "11 22 33" %}
+{% set bank_accountNumber = "11223344" %}
+{% set benefit_benefitType = "Attendance Allowance" %}
+{% set benefit_netAmount = "£91.82" %}
+{% set benefit_startDate = "23/10/2018" %}
+{% set benefit_endDate = "-" %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Unable to complete task</h1>
+
+      <p class="govuk-body">
+        You can try to process the payment again later.
+      </p>
+
+      <p class="govuk-body">
+        This task will be moved to the team's paused task list.
+      </p>
+
+        {{ govukButton({
+          text: "Pause task",
+          href: "../task-list/paused/task-list-success"
+        }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
