@@ -23,22 +23,19 @@
 
 {% block content %}
 
-<h1 class="govuk-heading-xl">{{person_nationalInsurance}}</h1>
+{{ govukPanel({
+  titleText: "Task complete",
+  html: "Go to the task list to start a new task."
+}) }}
 
-{% include "../components/task-information/task-information.html" %}
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
 
 
-<div class="govuk-button-group">
-  {{ govukButton({
-    text: "Complete task",
-    href: "task-confirmation"
-  }) }}
+<a href="../task-list/success/task-list" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Go to the task list
+</a>
 
-  {{ govukButton({
-    text: "Pause task",
-    classes: "govuk-button--secondary",
-    href: "../task-list/paused/task-list-success"
-  }) }}
-</div>
+<p class="govuk-body">If you completed this task by mistake, <a href="task">go back</a> to view the task again.</p>
+
 
 {% endblock %}

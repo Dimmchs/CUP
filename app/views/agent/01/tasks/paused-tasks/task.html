@@ -4,20 +4,19 @@
 {% set failure_theReason = "Unable to connect to Bank account maintenance" %}
 {% set person_fullName = "Mark Smith" %}
 {% set person_nationalInsurance = "AA 99 88 77 B" %}
-{% set bank_accountName = "Mark Smith" %}
-{% set bank_sortCode = "32 47 12" %}
-{% set bank_accountNumber = "57281908" %}
+{% set bank_accountName = "-" %}
+{% set bank_sortCode = "-" %}
+{% set bank_accountNumber = "-" %}
 {% set benefit_benefitType = "Jobseeker's Allowance" %}
-{% set benefit_netAmount = "74.70" %}
+{% set benefit_netAmount = "£74.70" %}
 {% set benefit_startDate = "04/04/2019" %}
 {% set benefit_endDate = "-" %}
-{% set status_lastUpdated = "09/12/2021" %}
 
 {% block beforeContent %}
 
 {{ govukBackLink({
   text: "Back",
-  href: "../../task-list/paused/task-list"
+  href: "../task-list/success/task-list"
 }) }}
 
 {% endblock %}
@@ -26,13 +25,13 @@
 
 <h1 class="govuk-heading-xl">{{person_nationalInsurance}}</h1>
 
-{% include "../../components/task-information/paused-task-information.html" %}
+{% include "../../components/task-information/task-information.html" %}
 
 
 <div class="govuk-button-group">
   {{ govukButton({
     text: "Complete task",
-    href: "../../task-list/success/task-list-paused-success"
+    href: "task-confirmation"
   }) }}
 </div>
 
