@@ -1,0 +1,53 @@
+
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Outstanding tasks</h1>
+
+  <table class="govuk-table">
+  <thead class="govuk-table__head">
+  <caption class="govuk-table__caption govuk-table__caption--m">The team have 5 tasks to complete</caption>
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header">Last updated</th>
+    <th scope="col" class="govuk-table__header">Case</th>
+    <th scope="col" class="govuk-table__header">Reason payment not sent</th>
+    <th scope="col" class="govuk-table__header">Status</th>
+    <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+  </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">05/04/2022</th>
+      <td class="govuk-table__cell">-</td>
+      <td class="govuk-table__cell">Unable to connect to Bank account maintenance</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../../tasks/task-2">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">20/05/2022</th>
+      <td class="govuk-table__cell">XX112233B</td>
+      <td class="govuk-table__cell">Unable to connect to Payment Dates</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../tasks/task">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">20/06/2022</th>
+      <td class="govuk-table__cell">XX112233B</td>
+      <td class="govuk-table__cell">Unable to connect to Bank account maintenance</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../tasks/task">Start</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">20/07/2022</th>
+      <td class="govuk-table__cell">XX112233B</td>
+      <td class="govuk-table__cell">Unable to connect to Payment Dates</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../tasks/task">Start</a></td>
+    </tr>
+
+  </tbody>
+  </table>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+
+{% extends "../layouts/task.html" %}
+
+{% set failure_theReason = "Unable to connect to [service name]" %}
+{% set person_fullName = "Jane Doe" %}
+{% set person_nationalInsurance = "XX 11 22 33 B" %}
+{% set bank_accountName = "Jane Doe" %}
+{% set bank_sortCode = "11 22 33" %}
+{% set bank_accountNumber = "11223344" %}
+{% set benefit_benefitType = "Attendance Allowance" %}
+{% set benefit_netAmount = "£91.82" %}
+{% set benefit_startDate = "23/10/2018" %}
+{% set benefit_endDate = "-" %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">XX 11 22 33 B</h1>
+
+{% include "../components/task-information/task-information.html" %}
+
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Complete task",
+    href: "../task-list/success/task-list"
+  }) }}
+
+  {{ govukButton({
+    text: "Pause task",
+    classes: "govuk-button--secondary",
+    href: "../task-list/paused/task-list-success"
+  }) }}
+</div>
+
+{% endblock %}

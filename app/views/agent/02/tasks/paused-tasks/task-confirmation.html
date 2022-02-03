@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% set failure_theReason = "Unable to connect to Bank account maintenance" %}
+{% set person_fullName = "Jane Doe" %}
+{% set person_nationalInsurance = "XX 11 22 33 B" %}
+{% set bank_accountName = "-" %}
+{% set bank_sortCode = "-" %}
+{% set bank_accountNumber = "-" %}
+{% set benefit_benefitType = "Attendance Allowance" %}
+{% set benefit_netAmount = "£91.82" %}
+{% set benefit_startDate = "23/10/2018" %}
+{% set benefit_endDate = "-" %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "../task-list/task-list"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+{{ govukPanel({
+  titleText: "Task complete",
+  html: "Go to the task list to start a new task."
+}) }}
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+
+<a href="../../task-list/success/task-list-paused-success" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Go to the task list
+</a>
+
+<p class="govuk-body">If you completed this task by mistake, <a href="task">go back</a> to view the task again.</p>
+
+
+{% endblock %}

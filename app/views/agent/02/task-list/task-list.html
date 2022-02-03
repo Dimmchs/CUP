@@ -1,0 +1,74 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Unsent payments</h1>
+
+  <table class="govuk-table">
+  <thead class="govuk-table__head">
+  <caption class="govuk-table__caption govuk-table__caption--m">The team have 7 payments to create</caption>
+  <tr class="govuk-table__row">
+    <th scope="col" class="govuk-table__header">Due date</th>
+    <th scope="col" class="govuk-table__header">NINO</th>
+    <th scope="col" class="govuk-table__header">Reason payment not sent</th>
+    <th scope="col" class="govuk-table__header">Status</th>
+    <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+  </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header">11/02/2022</th>
+    <td class="govuk-table__cell">XX112233B</td>
+    <td class="govuk-table__cell">Account not found in Bank Account Maintenance</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../tasks/task">Start</a></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header">14/02/2022</th>
+    <td class="govuk-table__cell">-</td>
+    <td class="govuk-table__cell">Account not found in Bank Account Maintenance</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../tasks/task-2">Start</a></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header">14/02/2022</th>
+    <td class="govuk-table__cell">AA998877B</td>
+    <td class="govuk-table__cell">Account not found in Bank Account Maintenance</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../tasks/task-1">Start</a></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header">15/02/2022</th>
+    <td class="govuk-table__cell">BB001122B</td>
+    <td class="govuk-table__cell">Unable to connect to Payment Dates</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../tasks/task">Start</a></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header">15/02/2022</th>
+    <td class="govuk-table__cell">BB001122B</td>
+    <td class="govuk-table__cell">Unable to connect to Payment Dates</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../tasks/task">Start</a></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header">16/02/2022</th>
+    <td class="govuk-table__cell">AA998877B</td>
+    <td class="govuk-table__cell">Account not found in Bank Account Maintenance</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not started</strong></td>
+    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../tasks/task">Start</a></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header">14/02/2022</th>
+    <td class="govuk-table__cell">XX112233B</td>
+    <td class="govuk-table__cell">Unable to connect to Payment Dates</td>
+    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag">In progress</strong></td>
+    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../tasks/task">Start</a></td>
+  </tr>
+  </tbody>
+  </table>
+
+
+
+{% endblock %}

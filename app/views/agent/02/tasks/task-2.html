@@ -1,0 +1,49 @@
+
+{% extends "../layouts/task.html" %}
+
+{% set failure_thePaymentid= "55FEF074-5A46-34F2-7A47-E7BDBF444B8" %}
+{% set failure_theReason = "Account not found in Bank Account Maintenance" %}
+{% set failure_theDateandtime = "09/12/2021 at 11:00am" %}
+{% set person_fullName = "-" %}
+{% set person_nationalInsurance = "-" %}
+{% set bank_accountName = "-" %}
+{% set bank_sortCode = "-" %}
+{% set bank_accountNumber = "-" %}
+{% set benefit_benefitType = "Jobseeker's Allowance" %}
+{% set benefit_netAmount = "£88.70" %}
+{% set benefit_startDate = "04/04/2019" %}
+{% set benefit_endDate = "-" %}
+{% set benefit_dueDate = "14/02/2022" %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "../task-list/success/task-list-alt"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">{{person_nationalInsurance}}</h1>
+
+{% include "../components/task-information/task-information.html" %}
+
+<div class="govuk-inset-text">
+  Select ‘continue’ to make a replacement payment and close this item.
+</div>
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue",
+    href: "../tasks/task-2"
+  }) }}
+
+  {{ govukButton({
+    text: "Mark as in progress",
+    classes: "govuk-button--secondary",
+    href: "../task-list/paused/task-list-success-alt"
+  }) }}
+</div>
+
+{% endblock %}

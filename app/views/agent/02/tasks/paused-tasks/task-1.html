@@ -1,0 +1,42 @@
+
+{% extends "../../layouts/task.html" %}
+
+{% set failure_thePaymentid= "55FEF074-5A46-34F2-7A47-E7BDBF444B8" %}
+{% set failure_theReason = "Unable to connect to Payment Dates" %}
+{% set failure_theDateandtime = "09/12/2021 at 11:00am" %}
+{% set person_fullName = "Hannah Parker" %}
+{% set person_nationalInsurance = "XX 11 22 33 B" %}
+{% set bank_accountName = "-" %}
+{% set bank_sortCode = "-" %}
+{% set bank_accountNumber = "-" %}
+{% set benefit_benefitType = "Jobseeker's Allowance" %}
+{% set benefit_netAmount = "£80.70" %}
+{% set benefit_startDate = "-" %}
+{% set benefit_endDate = "-" %}
+{% set benefit_dueDate = "14/02/2022" %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "/agent/02/task-list/paused/task-list5tasks"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">{{person_nationalInsurance}}</h1>
+
+{% include "../../components/task-information/task-information.html" %}
+<div class="govuk-inset-text">
+  Select ‘continue’ to make a replacement payment and close this item.
+</div>
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue",
+    href: "/agent/02/tasks/paused-tasks/task-1"
+  }) }}
+</div>
+
+{% endblock %}

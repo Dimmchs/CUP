@@ -1,0 +1,44 @@
+
+{% extends "../layouts/task.html" %}
+
+{% set failure_theReason = "Unable to connect to Bank account maintenance" %}
+{% set person_fullName = "Jane Doe" %}
+{% set person_nationalInsurance = "XX 11 22 33 B" %}
+{% set bank_accountName = "-" %}
+{% set bank_sortCode = "-" %}
+{% set bank_accountNumber = "-" %}
+{% set benefit_benefitType = "Attendance Allowance" %}
+{% set benefit_netAmount = "£91.82" %}
+{% set benefit_startDate = "23/10/2018" %}
+{% set benefit_endDate = "-" %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "../tasks/task"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-l">Do you want to complete this task?</h1>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    If you selected to complete this task by mistake, go back to view the task again.
+  </strong>
+</div>
+
+<a href="../task-list/success/task-list-alt" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Complete task
+</a>
+
+<p class="govuk-body"></p>
+
+
+{% endblock %}
