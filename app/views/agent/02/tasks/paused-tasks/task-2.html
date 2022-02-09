@@ -4,6 +4,7 @@
 {% set failure_thePaymentid= "55FEF074-5A46-34F2-7A47-E7BDBF444B8" %}
 {% set failure_theReason = "Account not found in Bank Account Maintenance" %}
 {% set failure_theDateandtime = "09/12/2021 at 11:00am" %}
+{% set failure_status = "In progress by Alex Harper" %}
 {% set person_fullName = "John Smith" %}
 {% set person_nationalInsurance = "CC 33 44 55 B" %}
 {% set bank_accountName = "-" %}
@@ -30,7 +31,7 @@
 
 {% include "../../components/task-information/task-information.html" %}
 <div class="govuk-inset-text">
-  Select ‘continue’ to make a replacement payment and close this item.
+  Select ‘continue’ to confirm that you have created a replacement payment and close this item.
 </div>
 <div class="govuk-button-group">
   {{ govukButton({

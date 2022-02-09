@@ -3,10 +3,18 @@
 <dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Payment ID
+      AME payment ID
     </dt>
     <dd class="govuk-summary-list__value">
       {{failure_thePaymentid}}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Incident occured
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{failure_theDateandtime}}
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -19,12 +27,13 @@
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Incident occured
+      Status
     </dt>
     <dd class="govuk-summary-list__value">
-      {{failure_theDateandtime}}
+      {{failure_status}}
     </dd>
   </div>
+
 </dl>
 
 <h2 class="govuk-heading-m">Citizen</h2>
@@ -103,6 +112,22 @@
     </dt>
     <dd class="govuk-summary-list__value">
       {{benefit_dueDate}}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Benefit start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{benefit_startDate}}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Benefit end date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{benefit_endDate}}
     </dd>
   </div>
 </dl>
